@@ -2,12 +2,12 @@ project:
   type: website
 
 website:
-  title: "Lily_DSPG24_Blog"
+  title: "Lily's DSPG 2024 Blog"
   navbar:
     right:
       - about.qmd
       - icon: github
-        href: https://github.com/
+        href: https://github.com/lilychristenson
       - icon: twitter
         href: https://twitter.com
 format:
