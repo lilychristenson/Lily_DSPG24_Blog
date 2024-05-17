@@ -9,8 +9,6 @@ website:
       - about.qmd
       - icon: github
         href: https://github.com/lilychristenson
-      - icon: twitter
-        href: https://twitter.com
       - icon: linkedin
         href: https://www.linkedin.com/in/lily-christenson-080b51235/
 format:
