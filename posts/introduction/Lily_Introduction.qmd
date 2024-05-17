@@ -9,10 +9,38 @@ categories: [Introduction]
 
 ![](imgs/Me.jpg){fig-align="center"}
 
-My name is Lily, and I am from Des Moines, Iowa. In fall 2024, I will be a senior majoring in statistics and minoring in general business. I chose a statistics major because I have always enjoyed math, particularly statistics. I chose to minor in business because I believe it would be useful when working with companies. My plans are to get a job in data analytics/data science. Data science is important because it gives people and businesses valuable information and insight about data sets. Which in turn helps with decision-making. I have some prior data science knowledge from my previous statistics classes. I have learned how to analyze and make visuals from datasets using R. I also learned how to produce statistical outputs to help answer questions. Some extracurricular activities I enjoy are going to the gym, enjoying nature, playing with my dog, photography, watching movies and sports, and spending time with my friends and family. An interesting fact about me is that I can play 4 instruments.
+- My name is Lily, and I am from Des Moines, Iowa. In fall 2024, I will be a senior majoring in statistics and minoring in general business. I chose a statistics major because I have always enjoyed math, particularly statistics. I chose to minor in business because I believe it would be useful when working with companies. 
 
-![A picture you want to link here](imgs/Dog.jpg){width=256} ![A picture you want to link here](imgs/Instruments.jpg){width=266}
+- My plans are to get a job in data analytics/data science. Data science is important because it gives people and businesses valuable information and insight about data sets. Which in turn helps with decision-making. 
 
-![](imgs/Photo.jpg){width=280 fig-align="left"}
+- I have some prior data science knowledge from my previous statistics classes. I have learned how to analyze and make visuals from datasets using R. I also learned how to produce statistical outputs to help answer questions. 
 
-Skills that I value and appreciate about myself are that I am a very hard worker. When things get difficult, I don't give up and try multiple ways to solve the issue. I have good communication, collaboration, and listening skills. Three skills I want to develop throughout DSPG are my coding and data analytics skills. I also want to learn how to use SQL and strengthen my skills in Python, and R. Some of my data science skills are analyzing statistical outputs and using R studio to make visualizations. I also am curious and believe that comes in handy with data science. I am pursuing these skills because I believe data science is important work. I will become a better data scientist and strengthen my analytical skills. With these skills I will be able to use them in future jobs. It will give me the skills and knowledge needed to create insights for data. I plan to improve these skills by taking courses on datacamp to strengthen my knowledge in certain software. I also will work with my peers to work through problems. I also can utilize LinkedIn Learnings to learn more about different software.
+- Some extracurricular activities I enjoy are going to the gym, enjoying nature, playing with my dog, photography, watching movies and sports, and spending time with my friends and family. An interesting fact about me is that I can play 4 instruments.
+
+:::: {.columns}
+::: {.column width="50%"}
+![](imgs/Dog.jpg){width=260 fig-align="center"} 
+:::
+::: {.column width="50%"}
+![](imgs/Instruments.jpg){width=266 fig-align="center"}
+:::
+::::
+
+![](imgs/Photo.jpg){width=280 fig-align="center"}
+
+- Skills that I value and appreciate about myself are that I am a very hard worker. When things get difficult, I don't give up and try multiple ways to solve the issue. I have good communication, collaboration, and listening skills. 
+
+- Three skills I want to develop throughout DSPG are my coding and data analytics skills. I also want to learn how to use SQL and strengthen my skills in Python, and R. Some of my data science skills are analyzing statistical outputs and using R studio to make visualizations. I also am curious and believe that comes in handy with data science. 
+
+- I am pursuing these skills because I believe data science is important work. I will become a better data scientist and strengthen my analytical skills. With these skills I will be able to use them in future jobs. It will give me the skills and knowledge needed to create insights for data. 
+
+- I plan to improve these skills by taking courses on datacamp to strengthen my knowledge in certain software. I also will work with my peers to work through problems. I also can utilize LinkedIn Learnings to learn more about different software.
+
+![](imgs/curiosity.jpg){width=350 fig-align="center"}
+
+```{=html}
+<style>
+body {
+background-color: #F0EDDA;
+}
+```
