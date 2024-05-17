@@ -5,21 +5,161 @@ date: "2024-05-16"
 categories: [Introduction]
 ---
 
+
+
 ## About Me
 
 ![](imgs/Me.jpg){fig-align="center"}
 
+### Background
 - My name is Lily, and I am from Des Moines, Iowa. In fall 2024, I will be a senior majoring in statistics and minoring in general business. I chose a statistics major because I have always enjoyed math, particularly statistics. I chose to minor in business because I believe it would be useful when working with companies. 
 
+![](imgs/DesMoines.jpg){width=500 fig-align="center"}
+
+### Plans
 - My plans are to get a job in data analytics/data science. Data science is important because it gives people and businesses valuable information and insight about data sets. Which in turn helps with decision-making. 
 
+### Data Science
 - I have some prior data science knowledge from my previous statistics classes. I have learned how to analyze and make visuals from datasets using R. I also learned how to produce statistical outputs to help answer questions. 
 
+```{r packages, echo=FALSE}
+suppressPackageStartupMessages(library("tidyverse")); theme_set(theme_bw())
+library("knitr")
+library("ggplot2")
+library("ggResidpanel")
+advertising_sales <- read.csv("data/Advertising_Budget_and_Sales.csv")
+```
+
+```{r, echo=FALSE}
+advertising_sales$TV.Ad.Budget.... <- factor(advertising_sales$TV.Ad.Budget....)
+advertising_sales$Radio.Ad.Budget.... <- factor(advertising_sales$Radio.Ad.Budget....)
+advertising_sales$Sales.... <- factor(advertising_sales$Sales....)
+
+names(advertising_sales)[names(advertising_sales) == "TV.Ad.Budget...."] <- 
+  "TV.Ad.Budget"
+names(advertising_sales)[names(advertising_sales) == "Radio.Ad.Budget...."] <- 
+  "Radio.Ad.Budget"
+names(advertising_sales)[names(advertising_sales) == "Sales...."] <- 
+  "Sales"
+names(advertising_sales)[names(advertising_sales) == "Newspaper.Ad.Budget...."] <- 
+  "Newspaper.Ad.Budget"
+
+advertising_sales$TV.Ad.Budget <- as.numeric(advertising_sales$TV.Ad.Budget)
+advertising_sales$Sales <- as.numeric(advertising_sales$Sales)
+
+s <- rbind(
+  summary(advertising_sales$TV.Ad.Budget),
+  summary(advertising_sales$Newspaper.Ad.Budget),
+  summary(advertising_sales$Sales))
+
+rownames(s) = c("TV", "Newspaper", "Sales")
+
+knitr::kable(s,
+             caption = "Summary of Adverstising data",
+             align = c("llll"))
+
+g <- ggplot(data      = advertising_sales, 
+       aes(x     = TV.Ad.Budget,
+           y     = Sales,
+           color = Newspaper.Ad.Budget)) + 
+  geom_point() + 
+  scale_x_continuous(limits = c(0, 200)) +
+  scale_y_continuous(limits = c(0, 125)) +
+  labs(x        = "TV Ad Budget ($1000)",
+       y        = "Sales Revenue (Million $)",
+       title.   = "Sales vs TV Ad Budget",
+       color    = "Newspaper Ad Budget ($1000)")
+
+g
+
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+g  <- ggplot(advertising_sales,
+            aes(x     = TV.Ad.Budget, 
+                color = Newspaper.Ad.Budget,
+                y     = Sales)) + 
+  geom_point() 
+
+g + 
+  geom_smooth(method = "lm") + 
+  labs(
+    x      = "TV Ad Budget",
+    colour = "Newspaper Ad Budget",
+    title  = "Sales Revenue vs TV and Newspaper Ad Budgets"
+  )
+```
+
+```{r, include=FALSE, message=FALSE, warning=FALSE}
+
+
+#interaction
+m <- glm(Sales ~ TV.Ad.Budget + Newspaper.Ad.Budget + 
+        TV.Ad.Budget:Newspaper.Ad.Budget,
+        data = advertising_sales)
+
+summary(m)
+
+#Slopes
+coef(summary(m))[2,1]
+coef(summary(m))[3,1]
+
+coef(summary(m))[4,4]
+
+confint(m)
+
+my_plots <- c("resid",
+              "index",
+              "qq",
+              "cookd")
+
+resid_panel(m,
+            plots = my_plots,
+            qqbands = TRUE)
+
+```
+
+```{r, echo=FALSE}
+resid_panel(m,
+            plots = my_plots,
+            qqbands = TRUE)
+```
+
+### Extracurriculars
 - Some extracurricular activities I enjoy are going to the gym, enjoying nature, playing with my dog, photography, watching movies and sports, and spending time with my friends and family. An interesting fact about me is that I can play 4 instruments.
 
 :::: {.columns}
 ::: {.column width="50%"}
 ![](imgs/Dog.jpg){width=260 fig-align="center"} 
+:::
+::: {.column width="50%"}
+![](imgs/Instruments.jpg){width=266 fig-align="center"}
+:::
+::::
+
+![](imgs/Photo.jpg){width=350 fig-align="center"}
+
+### Skills
+- Skills that I value and appreciate about myself are that I am a very hard worker. When things get difficult, I don't give up and try multiple ways to solve the issue. I have good communication, collaboration, and listening skills. 
+
+### Skills I want to Develop
+- Three skills I want to develop throughout DSPG are my coding and data analytics skills. I also want to learn how to use SQL and strengthen my skills in Python, and R. Some of my data science skills are analyzing statistical outputs and using R studio to make visualizations. I also am curious and believe that comes in handy with data science. 
+
+### Why these skills are important
+- I am pursuing these skills because I believe data science is important work. I will become a better data scientist and strengthen my analytical skills. With these skills I will be able to use them in future jobs. It will give me the skills and knowledge needed to create insights for data. 
+
+### Plan to build these skills
+- I plan to improve these skills by taking courses on datacamp to strengthen my knowledge in certain software. I also will work with my peers to work through problems. I also can utilize LinkedIn Learnings to learn more about different software.
+
+![](imgs/curiosity.jpg){width=370 fig-align="center"}
+
+```{=html}
+<style>
+body {
+background-color: #F0EDDA;
+}
+```
+
 :::
 ::: {.column width="50%"}
 ![](imgs/Instruments.jpg){width=266 fig-align="center"}
