@@ -5,7 +5,12 @@ date: "2024-05-16"
 categories: [Introduction]
 ---
 
-
+```{r eval=FALSE, include=FALSE}
+install.packages("tidyverse")
+install.packages("knitr")
+install.packages("ggplot2")
+install.packages("ggResidpanel")
+```
 
 ## About Me
 
